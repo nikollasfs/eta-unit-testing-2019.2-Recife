@@ -51,7 +51,7 @@ public class MyApplicationTest {
         SpyMessageService service = new SpyMessageService();
         application.setService(service);
         application.processMessage(message);
-        Assertions.assertEquals(MyApplication.PREFIX + "Test", service.msg);
+        Assertions.assertEquals("Test", service.msg);
 
     }
 
@@ -66,7 +66,7 @@ public class MyApplicationTest {
 
         application.setService(service);
         application.processMessage(message);
-        Assertions.assertEquals(MyApplication.PREFIX + msgContent, service.msg);
+        Assertions.assertEquals(msgContent, service.msg);
 
     }
 }

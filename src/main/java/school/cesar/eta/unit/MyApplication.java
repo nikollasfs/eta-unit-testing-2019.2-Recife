@@ -1,8 +1,6 @@
 package school.cesar.eta.unit;
 
 public class MyApplication {
-    public static final String PREFIX = "[ETA - Unit Test] ";
-
     private MessageServiceInterface service = new MessageService();
 
 
@@ -12,7 +10,6 @@ public class MyApplication {
     }
 
     public boolean processMessage(Message msg) {
-        String newMsg = PREFIX + msg.getMsg();
-        return service.send(newMsg, msg.getRec());
+        return service.send(msg.getMsg(), msg.getRec());
     }
 }
